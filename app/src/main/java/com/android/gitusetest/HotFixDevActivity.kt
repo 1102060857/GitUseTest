@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.android.gitusetest.ui.theme.GitUseTestTheme
 
-class MainActivity : ComponentActivity() {
+class HotFixDevActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -22,8 +22,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android Hello Ktlion 这是从master来的")
-                    Greeting("hotFix")
+                    ShowGreeting("Android Hello Ktlion 这是从master来的")
+                    ShowGreeting("hotFix")
                 }
             }
         }
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun ShowGreeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
         modifier = modifier
@@ -40,8 +40,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun ShowGreetingPreview() {
     GitUseTestTheme {
-        Greeting("Android")
+        ShowGreeting("Android Hot Fix")
     }
 }

@@ -1,4 +1,4 @@
-package com.android.gitusetest
+package com.android.gitusetest.ui.theme
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,40 +10,34 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.android.gitusetest.ui.theme.GitUseTestTheme
 
-class MainActivity : ComponentActivity() {
+class Dev02Activity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             GitUseTestTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android Hello Ktlion 这是从master来的")
-                    Greeting("hotFix")
-                    Greeting("Android Hello Ktlion这是dev02分支")
-                    Greeting("新的分支")
+                    Greeting("新的分支dev02")
                 }
             }
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    GitUseTestTheme {
-        Greeting("Android")
+    @Composable
+    fun Greeting(name: String, modifier: Modifier = Modifier) {
+        Text(
+            text = "Hello $name",
+            modifier = modifier
+        )
+    }
+    @Preview(showBackground = true)
+    @Composable
+    fun GreetingPreview() {
+        GitUseTestTheme {
+            com.android.gitusetest.Greeting("iss53 新的需求")
+        }
     }
 }

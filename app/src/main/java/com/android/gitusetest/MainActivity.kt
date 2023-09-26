@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android Hello Ktlion")
+                    Greeting("Android Hello Ktlion 这是分支dev01")
                 }
             }
         }

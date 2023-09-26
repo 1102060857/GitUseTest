@@ -37,7 +37,7 @@ class Dev02Activity : ComponentActivity() {
     @Composable
     fun GreetingPreview() {
         GitUseTestTheme {
-            com.android.gitusetest.Greeting("iss53")
+            com.android.gitusetest.Greeting("iss53 新的需求")
         }
     }
 }
